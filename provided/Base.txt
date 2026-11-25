@@ -1,0 +1,39 @@
+﻿Classes base (sense anotacions ni relacions):
+// ---------- Bioma.cs ----------
+namespace ExamenCendres.Models;
+
+
+public enum Bioma
+{
+    BOSC,
+    CIUTAT,
+    NEU,
+    DESERT,
+    VOLCA,
+    PANTA
+}
+// ---------- Zona.cs ----------
+namespace ExamenCendres.Models
+{
+    public class Zona
+    {
+        public int ZonaID { get; set; }
+        public string Nom { get; set; }
+        public Bioma Bioma { get; set; }
+        public int NivellRecomanat { get; set; }
+        public bool Explorada { get; set; }
+        public int Secrets { get; set; }
+    }
+}
+
+
+// ---------- Foguera.cs ----------
+namespace ExamenCendres.Models
+{
+    public class Foguera
+    {
+        public int FogueraID { get; set; }
+        public string Nom { get; set; }
+        public int Descansos { get; set; }
+    }
+}
